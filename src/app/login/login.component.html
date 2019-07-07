@@ -1,0 +1,60 @@
+
+
+<body id="login-section">
+
+    <div class="login">
+             <img class="img-responsive center-block" src="../../assets/images/logo.jpeg" width="100">
+             <form [formGroup]="loginForm">
+                <div class="input-group">
+                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                   <input id="email" type="text" class="form-control"  name="email" formControlName="email" placeholder="Email">
+                   <div *ngIf="loginForm.controls['email'].touched && !loginForm.controls['email'].valid">
+                    <span class="help-block" style="color:red" *ngIf="loginForm.controls['email'].hasError('required')">
+                      Email is required</span>
+                  </div>
+                </div>
+                <div class="input-group">
+                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                   <input id="password" type="password" class="form-control" formControlName="password" name="password" placeholder="Password">
+                
+                   <div *ngIf="loginForm.controls['password'].touched && !loginForm.controls['password'].valid">
+                    <span class="help-block" style="color:red" *ngIf="loginForm.controls['password'].hasError('required')">
+                      Password is required</span>
+                  </div>
+                </div>
+                
+
+                <button type="button" class="btn-sign btn btn-primary login-btn" [disabled]="!loginForm.valid"
+                      (click)='login(loginForm.value)'>Sign in</button>
+               
+             </form>
+          </div>
+    
+    
+    
+          
+    
+            
+                 <!-- =========================
+        End
+    ============================== -->
+            
+            
+    
+    
+     <!-- jQuery -->
+      
+    
+        
+        
+        
+        
+     
+    
+        <!-- Bootstrap Core JavaScript -->
+        
+        
+        
+      
+    </body>
+    
